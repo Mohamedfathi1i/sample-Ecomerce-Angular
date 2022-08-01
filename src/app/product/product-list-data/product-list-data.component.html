@@ -1,0 +1,41 @@
+<div class="container-fluid px-5">
+  <div class="row">
+    <div class="col-12">
+
+
+      <div class="row">
+
+        <app-product-card *ngFor="let cart of produvtlist" class="col-3 mb-3" [productdetail]="cart"
+          (selectedProduct)="getSelectedproduc($event)"></app-product-card>
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<div class="row">
+
+<app-product-card *ngFor="let cart of produvtlist" class="col-3" [productdetail]="cart" (selectedProduct)="getSelectedproduc($event)"></app-product-card>
+
+</div>
+ -->

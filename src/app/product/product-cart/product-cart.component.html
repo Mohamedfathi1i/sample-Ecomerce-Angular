@@ -1,0 +1,21 @@
+<!-- <h1>{{product?.title}}</h1> -->
+<!-- <button (click)="cartlist()">ssssssssssssss</button> -->
+
+
+<!-- 
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+  aria-controls="offcanvasRight">Cart</button> -->
+
+<div class="offcanvas offcanvas-end w-25" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Cart Shop</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" style="width: 100%;">
+    <div class=" text-nowrap" >
+      <p  class=" w-100 d-flex justify-content-between align-items-center" *ngFor="let cart of cartl ;let i = index"><span class="overflow-hidden me-4">{{cart}}</span><button class="btn btn-danger" (click)="deletfromcart(i)">x</button>
+      </p>
+    </div>
+  </div>
+</div>

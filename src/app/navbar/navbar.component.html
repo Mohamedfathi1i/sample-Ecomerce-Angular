@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/productlist">App Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/productlist">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/imgs">Images</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user-profile">user Profile</a>
+        </li>
+
+
+      </ul>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo">Add product</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content ">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel">Add product</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <app-add-product class="w-75 mx-auto"></app-add-product>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-success mx-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"><i class="bi bi-cart3"></i></button>
+      <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+        aria-controls="offcanvasRight2"><i class="bi bi-bookmark-heart"></i></button>
+        <button class="btn btn-success mx-4" type="button"routerLink="/login">Log in</button>
+
+    </div>
+  </div>
+</nav>

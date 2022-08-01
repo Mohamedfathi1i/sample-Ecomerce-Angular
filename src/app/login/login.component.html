@@ -1,0 +1,40 @@
+<div class="container d-flex align-items-center justify-content-center flex-column">
+  <div>
+    <img src="../../assets/img/logo.png" class="img py-5 my-3 " alt="">
+  </div>
+
+  <form #loginform="ngForm" class="form w-50" (ngSubmit)="login()">
+
+    <div class="form-group d-flex flex-row align-items-center justify-content-start my-3">
+      <label for="username" class="pe-3 w-25"> email</label>
+      <input type="text" id="username" name="username" class="form-control w-50" [(ngModel)]="user.email" required
+        #username="ngModel">
+      <span [hidden]="username.valid || username.pristine" class="alert alert-danger text-nowrap py-2 m-0 ms-2 ">
+        username is
+        required </span>
+
+    </div>
+
+    <div class="form-group d-flex flex-row align-items-center justify-content-start mb-4">
+      <label for="pass" class="pe-3 w-25"> passwrod</label>
+      <input type="password" id="pass" name="userpassword" class="form-control w-50" [(ngModel)]="user.password" required
+        minlength="2" #userpassword="ngModel">
+      <div [hidden]="userpassword.valid || userpassword.pristine" class="alert alert-danger text-nowrap py-2 m-0 ms-2">
+        password min length 8 </div>
+    </div>
+    <!-- <input name="firstName" ngModel pattern="[a-zA-Z ]*">-->
+
+
+
+    <div class="text-center">
+      <input type="submit" [disabled]="loginform.invalid" value="login" class="btn btn-primary w-50 mb-5 ">
+    </div>
+    <!-- {{user|json}}
+    {{loginform.status}}
+    {{loginform.value|json}} -->
+  </form>
+
+
+
+
+</div>

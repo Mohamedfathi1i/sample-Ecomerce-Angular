@@ -1,0 +1,17 @@
+<div appCardeffect class="card text-center my-2 mycard">
+  <div Class="card-img h-25">
+    <img [src]="productdetail?.image" class="card-img-top" alt="...">
+  </div>
+  <div  class="card-body overflow-hidden">
+    <h5 class="card-title text-danger text-nowrap overflow-hidden">{{productdetail.title |stringSlice:30}}</h5>
+    <p  class="card-text">{{productdetail.description|stringSlice:30}}</p>
+    <div class="d-flex align-items-center justify-content-evenly">
+      <a class="btn btn-success" (click)="sendproduct()"> <i class="bi bi-bag"></i></a>
+      <a class="btn btn-danger" (click)="sendfavproduct()" (click)="onSelectProduct()"> <i class="bi bi-bookmark-heart"></i> </a>
+      <a [routerLink]="['/productdt',productdetail.id]" class="btn btn-primary"> <i
+          class="bi bi-eye"></i> </a>
+    </div>
+
+
+  </div>
+</div>
